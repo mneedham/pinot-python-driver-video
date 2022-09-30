@@ -1,0 +1,17 @@
+version: '3'
+services:
+  jupyter:
+    container_name: "jupyter"
+    image: jupyter/scipy-notebook:${JUPYTER_VERSION:-latest}
+    volumes:
+      - ./notebooks:/home/jovyan
+    ports:
+      - "8888:8888"
+  pinot:
+    image: apachepinot/pinot:0.11.0
+    command: "QuickStart -type BATCH"
+    container_name: "pinot"
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+      - "8000:8000"
