@@ -16,4 +16,4 @@ In the output you'll see a link to the Jupyter notebook. Copy that and open it i
 
 ## Jupyter Notebooks
 
-You can find the notebooks in the `notebooks` directory. 
+You can find the notebooks in the `notebooks` directory. Navigate there and open https://github.com/mneedham/pinot-python-driver-video/blob/main/notebooks/PinotPythonDriver-Complete.ipynb[PinotPythonDriver-Complete.ipynb]
