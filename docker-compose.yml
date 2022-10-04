@@ -7,6 +7,8 @@ services:
       - ./notebooks:/home/jovyan
     ports:
       - "8888:8888"
+    networks: 
+      - pinot-python-network
   pinot:
     image: apachepinot/pinot:0.11.0
     command: "QuickStart -type BATCH"
@@ -15,3 +17,9 @@ services:
     ports:
       - "9000:9000"
       - "8000:8000"
+    networks: 
+      - pinot-python-network
+networks:
+  pinot-python-network:
+    name: pp    
+  

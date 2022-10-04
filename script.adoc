@@ -1,0 +1,9 @@
+pip install jupytext
+jupytext \
+  notebooks/PinotPythonDriver-Complete.ipynb \
+  --output streamlit/PinotPythonDriver.py
+
+docker run \
+  -v $PWD/streamlit/PinotPythonDriver.py:/workdir/app.py \
+  --network pp -p 8501:8501 \
+  pinot-driver-streamlit:0.0.1
