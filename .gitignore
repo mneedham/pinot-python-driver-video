@@ -1,0 +1,7 @@
+.cache
+.vscode
+.venv
+.ipynb_checkpoints
+.local
+.jupyter
+.ipython
